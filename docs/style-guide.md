@@ -202,9 +202,9 @@ The test for which palette a chart takes: **would a reader want to act on one of
 
 ### One colour per state
 
-A state has one colour everywhere it appears. If scaling is amber in a status pill, it is amber in the chart above it, in the glyph beside the count, and in the row's edge. The pill is the reference, because it is where the word sits next to the colour, so a product that has to choose looks at its pill first and draws everything else to match.
+A state has one colour everywhere it appears. If degraded is amber in a status pill, it is amber in the chart above it, in the glyph beside the count, and in the row's edge. The pill is the reference, because it is where the word sits next to the colour, so a product that has to choose looks at its pill first and draws everything else to match.
 
-Two consequences follow. A chart cannot give two states different colours when their pills share one: scaling up and scaling down are both amber in the pill, so a chart that wants to show both merges them into one segment under a shared label rather than inventing a second amber or borrowing a series colour. The reading is coarser and it is honest; a colour the pill never uses would tell the reader there is a state that does not exist. And a state that reads as an error in one place cannot read as progress in another: a cluster being destroyed on purpose is in progress, so it is info in the pill and info in the chart, not danger in either.
+Two consequences follow. A chart cannot give two states different colours when their pills share one: scaling and destroying are both in progress, so both are info in the pill ([Iconography](iconography.md#state-glyphs)), and a chart that wants to show both merges them into one segment under a shared label rather than inventing a second grey or borrowing a series colour. The reading is coarser and it is honest; a colour the pill never uses would tell the reader there is a state that does not exist. And a state that reads as an error in one place cannot read as progress in another: a cluster being destroyed on purpose is in progress, so it is info in the pill and info in the chart, not danger in either.
 
 ### Syntax
 

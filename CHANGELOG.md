@@ -2,6 +2,12 @@
 
 Each release lists two kinds of change. **Act on** is a change to what a component should look like or how it behaves: a product has to change its own code to follow it, and the audit may not notice if it doesn't. **Arrives by itself** is a token value or tooling change that a product picks up by reinstalling.
 
+## Unreleased
+
+Act on:
+
+- **In progress takes info.** Booting, upgrading, scaling, destroying and every other state that is changing as expected take the info colour with the arrows glyph, so amber is left for something someone should look at. A change that runs well past its usual time becomes needs attention (the triangle, in warning), and one that carries risk while it runs, such as an array rebuilding with reduced redundancy, keeps the arrows in warning. A state chart follows its pills, so in-progress segments that used to differ (scaling in amber, destroying in grey) merge into one. Iconography, State glyphs; style guide, One colour per state.
+
 ## 0.10.0
 
 Act on:

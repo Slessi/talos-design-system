@@ -6,7 +6,7 @@ Each release lists two kinds of change. **Act on** is a change to what a compone
 
 Act on:
 
-- **In progress takes info.** Booting, upgrading, scaling, destroying and every other state that is changing as expected take the info colour with the arrows glyph, so amber is left for something someone should look at. A change that runs well past its usual time becomes needs attention (the triangle, in warning), and one that carries risk while it runs, such as an array rebuilding with reduced redundancy, keeps the arrows in warning. A state chart follows its pills, so in-progress segments that used to differ (scaling in amber, destroying in grey) merge into one. Iconography, State glyphs; style guide, One colour per state.
+- **In progress takes info.** Booting, upgrading, scaling, destroying and every other state that is changing as expected take the info colour with the arrows glyph, so amber is left for something someone should look at. A change that runs past its limit, or puts something at risk while it runs (an array rebuilding with reduced redundancy), becomes needs attention: the triangle, in warning. Amber always comes with the triangle. The product sets each state's limit and says it in the tooltip. Everything else that shows a state follows its pill: chart segments, the glyph beside a count, and the 3px status edge on a card or row. In-progress chart segments that used to differ (scaling in amber, destroying in grey) merge into one, and an amber edge on a card for something upgrading goes back to `border-strong`. Iconography, State glyphs; style guide, One colour per state.
 
 ## 0.10.0
 

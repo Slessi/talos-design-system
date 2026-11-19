@@ -8,7 +8,7 @@ The shapes are specified, not the files. A product draws them from whatever icon
 
 1. **A shape means one thing.** The circled tick means succeeded, in every product. The bare tick means chosen. Neither stands in for the other.
 2. **A state has a shape as well as a colour, and the word stays.** Red and green are the pair most often confused, and they are the pair status leans on hardest. The glyph makes the state readable without its colour and the word makes it readable without the glyph (WCAG 1.4.1). The test: in greyscale, every state on the page still reads.
-3. **The glyph names the kind of state, not its colour.** Colour and glyph usually agree. Where they don't, the glyph still follows the kind: an array rebuilding with reduced redundancy is changing, so it takes the arrows, and at risk while it does, so it takes amber.
+3. **The glyph names the kind of state, not its colour.** Colour and glyph usually agree, but a colour can cover more than one kind. In progress, off and unknown are all info, so the glyph is what tells them apart.
 4. **A glyph beside its word is hidden from assistive technology** (`aria-hidden`), because the word already says it. A glyph with no word needs an accessible name, and a tooltip alone is not one.
 5. **State glyphs don't move.** A column of spinning icons is noise, and motion has to respect `prefers-reduced-motion` anyway. A spinner is for the one thing the reader has just asked for and is waiting on.
 
@@ -29,7 +29,7 @@ Five of the six are circles, told apart by the mark inside. The triangle is the 
 
 **In progress is info.** Colour says whether someone should look, and a change that is going as expected doesn't need anyone. A rolling upgrade that turned every row amber would teach the reader to ignore amber, so the arrows carry the change and the colour stays quiet. This holds whichever way the change is headed: booting and destroying are both info.
 
-A change earns amber in two ways. One that runs well past the time it normally takes is no longer expected to settle, so it becomes needs attention, with the triangle in warning, and keeps its word and how long it has been there ("Rebooting, 25 min"). One that carries risk while it runs, like the rebuilding array above, keeps the arrows and takes warning for the risk.
+A change earns amber when it runs past its limit or puts something at risk while it runs, such as an array rebuilding with reduced redundancy. Either way someone should look, so it becomes needs attention: the triangle in warning, keeping its word with how long it has run or how far it has got ("Rebooting, 25 min", "Rebuilding, 40%"). Amber always comes with the triangle. The product sets the limit for each state and shows it in the tooltip ("Reboots usually finish within 10 minutes"). Limits differ between states and between products because the work does, but the treatment is the same everywhere.
 
 A value can take a state glyph when it is a verdict. True and false in a health column are succeeded and failed, drawn in the neutral colour if the product doesn't want them to read as alarms. The shape still says which is which.
 
